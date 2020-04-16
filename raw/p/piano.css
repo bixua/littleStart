@@ -1,0 +1,104 @@
+.btn,.btn:visited{
+    position:relative;
+    overflow:hidden;
+	width: 46px;/*宽度100px*/
+	height: 352px;/*高度100px*/
+	border:1px solid #000;/*边框1px粗，实心，黑色*/
+	display: block;/*把元素设置为块状元素 这个也是块状元素，但是
+	他是行内-块状元素*/
+	background-color: rgb(235,235,235);/*背景色设置为这个颜色
+	描述颜色有三种形式：#fff，black,rgb(0,0,0)*/
+	/*设置颜色的时候，尽量不用英文单词比如black，这个影响性能*/
+	font-size: 10px;/*字体大小*/
+	color: #000;/*字的颜色*/
+	text-decoration: none;/*把装饰的下划线去除*/
+	font-family: 'microsoft yahei';/*字体*/
+	text-align: center;/*字体居中*/
+	line-height: 56;/*行间距设置*/
+	box-shadow: 10px 15px 5px #888888;/*阴影：距离左边，距离上边，模糊度，颜色*/
+	-webkit-user-select:none ;/*谷歌浏览器下的用户选择：不能选*/
+	-moz-user-select: none;/*火狐浏览器下的用户选择：不能选*/
+	-ms-user-select: none;/*微软浏览器下的用户选择：不能选*/
+	-o-user-select: none;/*Opera浏览器下的用户选择：不能选*/
+	user-select:none ;/*通用浏览器下的用户选择：不能选*/
+	/*动画：从一个状态到另一个状态的过程*/
+	transition-property:  background,box-shadow,height;/*这个是变化的属性值*/
+	transition-duration:0.1s;/*动画持续时间*/
+	transition-timing-function:cubic-bezier(0.68, -0.55, 0.27, 1.55);/*动画效果*/
+	transition-delay: 0s;/*延迟几秒进行*/
+
+	border-radius: 5px;/*配合测试*/
+}
+/*.btn这个样式 鼠标经过的时候*/
+.btn:hover{
+	cursor: -webkit-grab;/*鼠标的手势*/
+	font-weight: 600;/*字体粗细*/
+}
+/*.btn这个样式 鼠标按下去的时候  visited：点击过的样式 focus:获取焦点的时候*/
+.btn:active{
+	background-color:rgb(212, 212, 212);
+	cursor: -webkit-grabbing;
+	box-shadow: 10px 10px 2px #666666;	
+	height: 349px;
+}
+.active{
+	background-color: rgb(212, 212, 212);
+	cursor: -webkit-grabbing;
+	box-shadow: 10px 10px 2px #666666;
+	height: 349px;
+}
+/*group-h下的第一层.btn这个样式*/
+.btn-group-h>.btn{
+	display: inline-block;
+	float: left;
+	border-radius: 0;
+}
+/*设置宽度，高度，字体，行间距*/
+.btn-group-v>.btn{
+	width: 352px;
+	height: 46px ;
+	text-align:left;
+	line-height: 4;/*行间距离 我慢慢设置移动到合适位子*/
+}
+/*逗号：就是这两div的样式都是下面这个样式*/
+.btn-group-h,.btn-group-v{
+	margin: 20px 0px;/*空格表示一个属性 里面有多个不同的值来共同完成描述这个属性*/
+}
+/*在这个group-h 后面的样式设置*/
+.btn-group-h:after{
+	display:block;/*设置成块状元素，比如表格,block*/
+	content:' ';/*内容设置成功*/
+	clear:both;/*清除浮动*/
+}
+.btn-group-h>.btn:first-child{
+	border-radius: 5px 0px 0 5px;
+}
+.btn-group-h>.btn:last-child{
+	border-radius: 0px 5px 5px 0px;
+}
+.btn-group-h>.btn:not(:first-child){
+	border-left-width: 0;
+
+}
+.btn-group-v>.btn:not(:first-child){
+	border-top-width: 0;
+}
+.play_rule{
+	width: 987px;
+	height: auto;
+	border:1px solid rgb(115, 47, 47);
+	border-radius:0px 5px 61px 0px;
+}
+.ad{
+	display: block;
+	width: auto;
+	height: auto;
+	text-decoration: none;
+	font-family: 'microsoft yahei';
+	margin-left: 50px;
+	margin-bottom: 10px;
+	color:rgb(115, 47, 47);
+}
+.tips{
+	margin:10px auto auto 470px ;
+}
